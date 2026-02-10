@@ -25,14 +25,23 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Check if required environment variables are set
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      console.error('Missing email configuration');
+      return NextResponse.json(
+        { error: 'Email configuration is missing' },
+        { status: 500 }
+      );
+    }
+
     // Create transporter
     const transporter: Transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 587,
-      secure: false,
+      host: process.env.SMTP_HOST || 'smtp.gmail.com',
+      port: parseInt(process.env.SMTP_PORT || '587'),
+      secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        pass: process.env.EMAIL_PASS, // Use app password, not regular password
       },
     });
 
@@ -87,7 +96,9 @@ ${message}
     };
 
     // Send email
-    await transporter.sendMail(mailOptions);
+    console.log('Attempting to send email to:', process.env.EMAIL_TO || 'basedhq0@gmail.com');
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Email sent successfully:', info.messageId);
 
     return NextResponse.json(
       { message: 'Message sent successfully' },
