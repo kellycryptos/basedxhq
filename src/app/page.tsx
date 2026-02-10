@@ -17,8 +17,8 @@ export default function HomePage() {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/60 bg-gradient-to-b from-black/50 to-black/70"></div>
+        {/* Gradient overlay for smooth transition */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-gray-900"></div>
         
         {/* Content */}
         <div className="relative z-10 container mx-auto px-6 text-center">
@@ -50,6 +50,63 @@ export default function HomePage() {
               >
                 Our Services
               </Link>
+            </div>
+          </motion.div>
+        </div>
+        {/* Gradient transition layer at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-gray-900 to-transparent"></div>
+      </section>
+
+      {/* Positioning Section - Dark Background */}
+      <section className="bg-gray-900 py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+                Web3 Marketing
+              </span>{' '}
+              Redefined
+            </h2>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              We don't just market Web3 projects—we build sustainable growth engines that drive real user adoption and community engagement in the decentralized ecosystem.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+              <div className="p-6">
+                <div className="text-blue-500 mb-4">
+                  <Zap className="w-12 h-12 mx-auto" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Strategic Growth</h3>
+                <p className="text-gray-400">
+                  Data-driven marketing strategies that scale with your project's evolution
+                </p>
+              </div>
+              
+              <div className="p-6">
+                <div className="text-blue-500 mb-4">
+                  <Users className="w-12 h-12 mx-auto" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Community-First</h3>
+                <p className="text-gray-400">
+                  Authentic engagement that builds loyal, active user bases
+                </p>
+              </div>
+              
+              <div className="p-6">
+                <div className="text-blue-500 mb-4">
+                  <TrendingUp className="w-12 h-12 mx-auto" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Measurable Impact</h3>
+                <p className="text-gray-400">
+                  Transparent reporting with clear ROI metrics and KPIs
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
