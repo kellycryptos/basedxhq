@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: 'BasedX HQ',
     images: [
       {
-        url: '/og-image-about.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'About BasedX HQ - Web3 Marketing Agency'
@@ -25,6 +25,6 @@ export const metadata: Metadata = {
     title: 'About Us | BasedX HQ - Web3 Marketing Agency',
     description: 'Learn about BasedX HQ, a specialized marketing agency focused exclusively on the Web3 ecosystem. Our mission, philosophy, and approach to Web3 marketing.',
     creator: '@basedxhq',
-    images: ['/og-image-about.jpg']
+    images: ['/og-image.jpg']
   },
 };

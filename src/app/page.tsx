@@ -7,17 +7,6 @@ import { ArrowRight, Twitter, Mail, Users, Zap, TrendingUp } from 'lucide-react'
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white">
-      {/* Navigation */}
-      <nav className="flex items-center justify-between p-6">
-        <div className="text-2xl font-bold">BasedX<span className="text-blue-500">HQ</span></div>
-        <div className="flex space-x-6">
-          <Link href="/about" className="hover:text-blue-400 transition-colors">About</Link>
-          <Link href="/services" className="hover:text-blue-400 transition-colors">Services</Link>
-          <Link href="/case-studies" className="hover:text-blue-400 transition-colors">Case Studies</Link>
-          <Link href="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="container mx-auto px-6 py-20 flex flex-col items-center text-center">
         <motion.div
@@ -186,27 +175,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="border-t border-gray-800 py-12">
-        <div className="container mx-auto px-6 text-center">
-          <div className="text-2xl font-bold mb-4">BasedX<span className="text-blue-500">HQ</span></div>
-          <p className="text-gray-400 max-w-md mx-auto mb-8">
-            Premium Web3 marketing services for blockchain projects, DAOs, and protocols.
-          </p>
-          <div className="flex justify-center space-x-6 mb-8">
-            <a href="https://x.com/basedxhq" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
-              <Twitter size={20} />
-            </a>
-            <a href="mailto:basedhq0@gmail.com" className="hover:text-blue-400">
-              <Mail size={20} />
-            </a>
-          </div>
-          <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} BasedX HQ. All rights reserved.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }

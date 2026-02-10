@@ -2,23 +2,11 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Target, Award, Users, Globe, Mail } from 'lucide-react';
+import { Target, Award, Users, Globe, Mail, Twitter } from 'lucide-react';
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white">
-      {/* Navigation */}
-      <nav className="flex items-center justify-between p-6">
-        <div className="text-2xl font-bold">BasedX<span className="text-blue-500">HQ</span></div>
-        <div className="flex space-x-6">
-          <Link href="/" className="hover:text-blue-400 transition-colors">Home</Link>
-          <Link href="/about" className="hover:text-blue-400 transition-colors">About</Link>
-          <Link href="/services" className="hover:text-blue-400 transition-colors">Services</Link>
-          <Link href="/case-studies" className="hover:text-blue-400 transition-colors">Case Studies</Link>
-          <Link href="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="container mx-auto px-6 py-20">
         <div className="max-w-3xl mx-auto text-center">
@@ -169,29 +157,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="border-t border-gray-800 py-12">
-        <div className="container mx-auto px-6 text-center">
-          <div className="text-2xl font-bold mb-4">BasedX<span className="text-blue-500">HQ</span></div>
-          <p className="text-gray-400 max-w-md mx-auto mb-8">
-            Premium Web3 marketing services for blockchain projects, DAOs, and protocols.
-          </p>
-          <div className="flex justify-center space-x-6 mb-8">
-            <a href="https://x.com/basedxhq" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M13.4 10.6 19.1 4H17.6C16.7 4 15.9 4.2 15.2 4.5L10.7 7.6 7.2 4.5C6.5 4.2 5.7 4 4.8 4H3.3L9 10.6 3.5 17.6H5C5.9 17.6 6.7 17.4 7.4 17L11.9 14 15.4 17.1C16.1 17.4 16.9 17.6 17.8 17.6H19.3L13.4 10.6ZM8.8 13.7 5.2 16.9H6.7L9.9 13.6C10.1 13.8 10.3 14 10.5 14.2L11.2 14.9 14.2 17.6H16.2L10.7 12.4 13.9 9.1 17.4 12.3C17.2 12.1 17 11.9 16.8 11.7L16.1 11 13.1 8.3H11.1L16.6 13.5 13.4 16.8 10.2 13.7C10 13.5 9.8 13.3 9.6 13.1L8.8 13.7Z"/>
-              </svg>
-            </a>
-            <a href="mailto:basedhq0@gmail.com" className="hover:text-blue-400">
-              <Mail size={20} />
-            </a>
-          </div>
-          <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} BasedX HQ. All rights reserved.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }

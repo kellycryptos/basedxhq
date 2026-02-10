@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: 'BasedX HQ',
     images: [
       {
-        url: '/og-image-services.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Web3 Marketing Services | BasedX HQ'
@@ -25,6 +25,6 @@ export const metadata: Metadata = {
     title: 'Web3 Marketing Services | BasedX HQ',
     description: 'Comprehensive Web3 marketing services including community building, growth hacking, strategic partnerships, and PR for blockchain projects, DAOs, and protocols.',
     creator: '@basedxhq',
-    images: ['/og-image-services.jpg']
+    images: ['/og-image.jpg']
   },
 };

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: 'BasedX HQ',
     images: [
       {
-        url: '/og-image-case-studies.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Web3 Marketing Case Studies | BasedX HQ'
@@ -25,6 +25,6 @@ export const metadata: Metadata = {
     title: 'Web3 Marketing Case Studies | BasedX HQ',
     description: 'Real results from our Web3 marketing campaigns. Explore our case studies showcasing successful growth strategies for DeFi protocols, NFT collections, and DAOs.',
     creator: '@basedxhq',
-    images: ['/og-image-case-studies.jpg']
+    images: ['/og-image.jpg']
   },
 };

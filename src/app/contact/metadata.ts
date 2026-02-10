@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: 'BasedX HQ',
     images: [
       {
-        url: '/og-image-contact.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Contact Us | BasedX HQ - Web3 Marketing Agency'
@@ -25,6 +25,6 @@ export const metadata: Metadata = {
     title: 'Contact Us | BasedX HQ - Web3 Marketing Agency',
     description: 'Get in touch with BasedX HQ, your premier Web3 marketing agency. Reach out to discuss your blockchain project marketing needs.',
     creator: '@basedxhq',
-    images: ['/og-image-contact.jpg']
+    images: ['/og-image.jpg']
   },
 };

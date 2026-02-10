@@ -1,15 +1,7 @@
-import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import Layout from '@/components/Layout';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: {
-    template: '%s | BasedX HQ - Web3 Marketing Agency',
-    default: 'BasedX HQ - Web3 Marketing Agency',
-  },
+  title: 'BasedX HQ - Web3 Marketing Agency',
   description: 'Premium Web3 marketing services for blockchain projects, DAOs, and protocols. Expert growth strategies for decentralized ecosystems.',
   keywords: ['Web3', 'marketing', 'crypto', 'blockchain', 'DAO', 'DeFi', 'NFT', 'agency'],
   authors: [{ name: 'BasedX HQ' }],
@@ -27,16 +19,16 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'BasedX HQ - Web3 Marketing Agency',
-      },
-    ],
+        alt: 'BasedX HQ - Web3 Marketing Agency'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'BasedX HQ - Web3 Marketing Agency',
     description: 'Premium Web3 marketing services for blockchain projects, DAOs, and protocols. Expert growth strategies for decentralized ecosystems.',
     creator: '@basedxhq',
-    images: ['/og-image.jpg'],
+    images: ['/og-image.jpg']
   },
   robots: {
     index: true,
@@ -52,18 +44,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://basedxhq.vercel.app',
   },
+  formatDetection: {
+    telephone: false,
+  },
+  icons: {
+    icon: '/favicon.ico',
+  }
 };
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Layout>{children}</Layout>
-      </body>
-    </html>
-  );
-}
