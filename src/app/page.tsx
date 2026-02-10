@@ -7,38 +7,52 @@ import { ArrowRight, Twitter, Mail, Users, Zap, TrendingUp } from 'lucide-react'
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white">
-      {/* Hero Section */}
-      <section className="container mx-auto px-6 py-20 flex flex-col items-center text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl"
-        >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-              Web3 Marketing
-            </span>{' '}
-            That Drives Growth
-          </h1>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            We help Web3 projects, DAOs, and protocols achieve product-market fit through strategic marketing, community building, and growth hacking.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg flex items-center justify-center gap-2 transition-all transform hover:scale-105"
-            >
-              Launch Your Campaign <ArrowRight size={18} />
-            </Link>
-            <Link 
-              href="/services" 
-              className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-lg transition-all"
-            >
-              Our Services
-            </Link>
-          </div>
-        </motion.div>
+      {/* Hero Section with Background Image */}
+      <section 
+        className="relative w-full min-h-[80vh] flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/60 bg-gradient-to-b from-black/50 to-black/70"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-4xl mx-auto"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+                Web3 Marketing
+              </span>{' '}
+              That Drives Growth
+            </h1>
+            <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
+              We help Web3 projects, DAOs, and protocols achieve product-market fit through strategic marketing, community building, and growth hacking.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-8 rounded-lg flex items-center justify-center gap-2 transition-all transform hover:scale-105 shadow-lg"
+              >
+                Work With Us <ArrowRight size={18} />
+              </Link>
+              <Link 
+                href="/services" 
+                className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-medium py-4 px-8 rounded-lg transition-all border border-white/20"
+              >
+                Our Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {/* Services Overview */}
