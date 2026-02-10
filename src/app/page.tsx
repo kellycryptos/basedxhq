@@ -1,0 +1,212 @@
+'use client';
+
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { ArrowRight, Twitter, Mail, Users, Zap, TrendingUp } from 'lucide-react';
+
+export default function HomePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white">
+      {/* Navigation */}
+      <nav className="flex items-center justify-between p-6">
+        <div className="text-2xl font-bold">BasedX<span className="text-blue-500">HQ</span></div>
+        <div className="flex space-x-6">
+          <Link href="/about" className="hover:text-blue-400 transition-colors">About</Link>
+          <Link href="/services" className="hover:text-blue-400 transition-colors">Services</Link>
+          <Link href="/case-studies" className="hover:text-blue-400 transition-colors">Case Studies</Link>
+          <Link href="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="container mx-auto px-6 py-20 flex flex-col items-center text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-3xl"
+        >
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+              Web3 Marketing
+            </span>{' '}
+            That Drives Growth
+          </h1>
+          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+            We help Web3 projects, DAOs, and protocols achieve product-market fit through strategic marketing, community building, and growth hacking.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg flex items-center justify-center gap-2 transition-all transform hover:scale-105"
+            >
+              Launch Your Campaign <ArrowRight size={18} />
+            </Link>
+            <Link 
+              href="/services" 
+              className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-lg transition-all"
+            >
+              Our Services
+            </Link>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Services Overview */}
+      <section className="container mx-auto px-6 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Web3 Marketing Services</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Specialized strategies designed for the unique challenges of marketing in the decentralized ecosystem
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div 
+            className="bg-gray-800/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+            whileHover={{ y: -10 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Zap className="text-blue-500 w-12 h-12 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Community Building</h3>
+            <p className="text-gray-400">
+              Grow authentic communities around your Web3 project with strategic engagement and retention tactics.
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="bg-gray-800/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+            whileHover={{ y: -10 }}
+            transition={{ duration: 0.3 }}
+          >
+            <TrendingUp className="text-blue-500 w-12 h-12 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Growth Hacking</h3>
+            <p className="text-gray-400">
+              Deploy experimental growth strategies tailored to the Web3 audience with measurable outcomes.
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="bg-gray-800/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+            whileHover={{ y: -10 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Users className="text-blue-500 w-12 h-12 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Strategic Partnerships</h3>
+            <p className="text-gray-400">
+              Forge valuable partnerships with other protocols, DAOs, and influencers in the Web3 space.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why BasedX HQ */}
+      <section className="container mx-auto px-6 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose BasedX HQ?</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            We specialize in marketing for the decentralized economy with proven expertise
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 className="text-2xl font-semibold mb-4">Deep Web3 Expertise</h3>
+            <p className="text-gray-300 mb-6">
+              Our team lives and breathes Web3. We understand the nuances of crypto audiences, 
+              regulatory landscapes, and the unique challenges facing blockchain projects.
+            </p>
+            
+            <h3 className="text-2xl font-semibold mb-4">Proven Track Record</h3>
+            <p className="text-gray-300">
+              We've helped 50+ Web3 projects reach their growth milestones with an average 
+              increase of 300% in community engagement and user acquisition.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
+            <h3 className="text-2xl font-semibold mb-6">Our Process</h3>
+            <ol className="space-y-4">
+              <li className="flex items-start">
+                <div className="bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-1">1</div>
+                <div>
+                  <h4 className="font-medium">Strategy Development</h4>
+                  <p className="text-gray-400 text-sm">Custom marketing roadmap aligned with your goals</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-1">2</div>
+                <div>
+                  <h4 className="font-medium">Community Activation</h4>
+                  <p className="text-gray-400 text-sm">Engagement campaigns to drive user adoption</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-1">3</div>
+                <div>
+                  <h4 className="font-medium">Growth Execution</h4>
+                  <p className="text-gray-400 text-sm">Multi-channel campaigns to accelerate growth</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-1">4</div>
+                <div>
+                  <h4 className="font-medium">Performance Analysis</h4>
+                  <p className="text-gray-400 text-sm">Detailed reporting and optimization</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof */}
+      <section className="container mx-auto px-6 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Join the Web3 Revolution</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+            Connect with us on X to stay updated on the latest Web3 marketing trends and insights
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="https://x.com/basedxhq" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-lg flex items-center justify-center gap-2 transition-all"
+            >
+              <Twitter size={18} /> Follow @basedxhq
+            </a>
+            <a 
+              href="mailto:basedhq0@gmail.com" 
+              className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg flex items-center justify-center gap-2 transition-all"
+            >
+              <Mail size={18} /> Contact Us
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-gray-800 py-12">
+        <div className="container mx-auto px-6 text-center">
+          <div className="text-2xl font-bold mb-4">BasedX<span className="text-blue-500">HQ</span></div>
+          <p className="text-gray-400 max-w-md mx-auto mb-8">
+            Premium Web3 marketing services for blockchain projects, DAOs, and protocols.
+          </p>
+          <div className="flex justify-center space-x-6 mb-8">
+            <a href="https://x.com/basedxhq" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
+              <Twitter size={20} />
+            </a>
+            <a href="mailto:basedhq0@gmail.com" className="hover:text-blue-400">
+              <Mail size={20} />
+            </a>
+          </div>
+          <p className="text-gray-500 text-sm">
+            © {new Date().getFullYear()} BasedX HQ. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+}
